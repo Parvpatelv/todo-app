@@ -29,9 +29,11 @@ def show_tasks(tasks):
 # Add a new task
 def add_task(tasks):
     task_name = input("\nEnter a new task: ")
-    tasks.append({"task": task_name, "done": False})
+    priority = input("Enter priority (High/Medium/Low): ")
+    tasks.append({"task": task_name, "priority": priority, "done": False})
     save_tasks(tasks)
     print("Task added!")
+
 
 # Mark a task as complete
 def complete_task(tasks):
